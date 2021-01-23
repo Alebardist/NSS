@@ -1,0 +1,87 @@
+﻿using System;
+
+namespace Natural_Selection_SimulatorV2
+{
+    public class Organism : OrganismPrototype
+    {
+        //private fields
+        private decimal _maxTempResist;
+        private decimal _minTempResist;
+        private int _speed;
+        private int _population;
+        private int _foodConsumption;
+        private int _eatedByPredators;
+        private int _maxRad;
+
+        //props
+        public override decimal MaxTempResist
+        {
+            get => _maxTempResist;
+            set => _maxTempResist = value;
+        }
+        public override decimal MinTempResist
+        {
+            get => _minTempResist;
+            set => _minTempResist = value;
+        }
+
+        public override int Speed
+        {
+            get => _speed;
+            set
+            {
+                if (value > 0) _speed = value;
+                else throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public override int Population
+        {
+            get => _population;
+            set
+            {
+                if (value > 0) _population = value;
+                //else throw new ArgumentOutOfRangeException();
+            }
+        }
+        public override int FoodConsumption
+        {
+            get => _foodConsumption;
+            set
+            {
+                if (value > 0) _foodConsumption = value;
+                else throw new ArgumentOutOfRangeException();
+
+            }
+        }
+        public override int EatedByPredators
+        {
+            get => _eatedByPredators;
+            set
+            {
+                if (value >= 0) _eatedByPredators = value;
+                else throw new ArgumentOutOfRangeException();
+
+            }
+        }
+        public override int MaxRad { get => _maxRad; set => _maxRad = value; }
+
+        public Organism(decimal maxTempResist, decimal minTempResist, int speed, int population = 10, int foodConsumption=2)
+        {
+            MaxTempResist = maxTempResist;
+            MinTempResist = minTempResist;
+            Speed = speed;
+            Population = population;
+            FoodConsumption = foodConsumption;
+        }
+
+        private Random _randomGenerator = new Random();
+        public override void PopulationExtension(EnvironmentNss envExmp)
+        {
+            if (envExmp.FoodAmount > FoodConsumption) Population += _randomGenerator.Next(0, _population/4);
+        }
+
+        
+
+    }
+}
