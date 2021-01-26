@@ -1,4 +1,4 @@
-﻿namespace Natural_Selection_SimulatorV2
+﻿namespace NSS_lib
 {
     public interface IEnvironmentChanger
     {

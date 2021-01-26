@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Natural_Selection_SimulatorV2
+namespace NSS_lib
 {
     public class EnvironmentNss : IEnvironmentNss
     {
@@ -18,7 +18,7 @@ namespace Natural_Selection_SimulatorV2
         }
 
         // EnvironmentCycle
-        public void EnvironmentCycle(Organism organismExmp)
+        public void EnvironmentCycle(OrganismPrototype organismExmp)
         {
             Temperature += _changer.ChangeTemperature();
             FoodAmount += _changer.GenerateFood();

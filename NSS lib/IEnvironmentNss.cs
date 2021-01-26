@@ -1,4 +1,4 @@
-﻿namespace Natural_Selection_SimulatorV2
+﻿namespace NSS_lib
 {
     public interface IEnvironmentNss
     {
@@ -6,6 +6,6 @@
         decimal Radiation { get; }
         decimal Temperature { get; }
 
-        void EnvironmentCycle(Organism organismExmp);
+        void EnvironmentCycle(OrganismPrototype organismExmp);
     }
 }

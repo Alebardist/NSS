@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Natural_Selection_SimulatorV2
+namespace NSS_lib
 {
     public class Organism : OrganismPrototype
     {
@@ -11,7 +11,8 @@ namespace Natural_Selection_SimulatorV2
         private int _population;
         private int _foodConsumption;
         private int _eatedByPredators;
-        private int _maxRad;
+
+        private int _populationExtensionModificator = 4;
 
         //props
         public override decimal MaxTempResist
@@ -40,8 +41,7 @@ namespace Natural_Selection_SimulatorV2
             get => _population;
             set
             {
-                if (value > 0) _population = value;
-                //else throw new ArgumentOutOfRangeException();
+                if (value >= 0) _population = value;
             }
         }
         public override int FoodConsumption
@@ -51,7 +51,6 @@ namespace Natural_Selection_SimulatorV2
             {
                 if (value > 0) _foodConsumption = value;
                 else throw new ArgumentOutOfRangeException();
-
             }
         }
         public override int EatedByPredators
@@ -64,9 +63,9 @@ namespace Natural_Selection_SimulatorV2
 
             }
         }
-        public override int MaxRad { get => _maxRad; set => _maxRad = value; }
+        public override int MaxRad { get; protected set; } = 0;
 
-        public Organism(decimal maxTempResist, decimal minTempResist, int speed, int population = 10, int foodConsumption=2)
+        public Organism(decimal maxTempResist, decimal minTempResist, int speed = 2, int population = 10, int foodConsumption=2)
         {
             MaxTempResist = maxTempResist;
             MinTempResist = minTempResist;
@@ -75,10 +74,10 @@ namespace Natural_Selection_SimulatorV2
             FoodConsumption = foodConsumption;
         }
 
-        private Random _randomGenerator = new Random();
         public override void PopulationExtension(EnvironmentNss envExmp)
         {
-            if (envExmp.FoodAmount > FoodConsumption) Population += _randomGenerator.Next(0, _population/4);
+            if (envExmp.FoodAmount > FoodConsumption) Population += RandomIntGenerator.random.Next(0, _population / _populationExtensionModificator);
+
         }
 
         

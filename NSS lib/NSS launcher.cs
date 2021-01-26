@@ -1,19 +1,15 @@
-﻿using System;
-
-//TODO: ! add abstract classes for other classes
-namespace Natural_Selection_SimulatorV2
+﻿namespace NSS_lib
 {
     public class Launcher
     {
-        public readonly Organism organism;
+        public readonly OrganismPrototype organism;
         public readonly StatisticCollector statisticCollector;
-
         private EnvironmentNss environmentObject;
         private static EnvironmentChanger changer;
 
-        public Launcher( int population = 10, int tempResistRange = 10 )
+        public Launcher( int UserPopulation = 10, int tempResistRange = 10 )
         {
-            organism = new Organism(tempResistRange, -tempResistRange, 2, population);
+            organism = new Organism(tempResistRange, -tempResistRange, population: UserPopulation);
             changer = new EnvironmentChanger(10, 100);
 
             environmentObject = new EnvironmentNss(300, 0, changer);
@@ -32,6 +28,7 @@ namespace Natural_Selection_SimulatorV2
                 Selection.NaturalSelection(organism, environmentObject);
                 Evolution.Evolute(organism, environmentObject);
             }
+
         } 
     }
 }

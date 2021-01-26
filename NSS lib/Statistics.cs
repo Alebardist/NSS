@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Natural_Selection_SimulatorV2
+namespace NSS_lib
 {
     public class StatisticCollector
     {
@@ -27,7 +27,7 @@ namespace Natural_Selection_SimulatorV2
         }
 
 
-        public void CollectData(Organism organism, EnvironmentNss environment)
+        public void CollectData(OrganismPrototype organism, EnvironmentNss environment)
         {
             DaysPassed++;
             //for preventing overflow exception

@@ -1,72 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Natural_Selection_SimulatorV2.OrganismPrototype" Collapsed="true">
-    <Position X="1" Y="0.75" Width="1.5" />
+  <Class Name="NSS_lib.OrganismPrototype" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>YAAAAAAAAAAAAAgIAAAAAAABAAAAAAAIAAAIAACAAAA=</HashCode>
       <FileName>Abstract Organism Class.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.EnvironmentChanger" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="1.75" Width="1.5" />
+  <Class Name="NSS_lib.EnvironmentChanger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAIBAAAAACAAAAAAQCAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIBAAAAACAAAAAAQCAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnvironmentChanger.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.EnvironmentNss" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+  <Class Name="NSS_lib.EnvironmentNss" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="1.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAQAAAAQAAAAAAAAAQAAAAAAAAAAAEAAA=</HashCode>
       <FileName>EnvironmentNss.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.Launcher" Collapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+  <Class Name="NSS_lib.Launcher">
+    <Position X="7.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAASAAAAAAAAAAAAAAAABBAAAAA=</HashCode>
       <FileName>NSS launcher.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.Organism">
-    <Position X="0.5" Y="1.75" Width="2.5" />
+  <Class Name="NSS_lib.Organism" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>YAAABAAAAAAAAAgpAAAAAAgBAABAAEAIBAAIAACAAQA=</HashCode>
+      <HashCode>YAAABgAAAAAAAAgoAAAAAAABAABAAEAIBAAIAACAAQA=</HashCode>
       <FileName>Organism.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.Evolution">
-    <Position X="3" Y="1.75" Width="2.25" />
+  <Class Name="NSS_lib.OrganismStrong" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>YAAABAAAAAAAAAgoAAAAAAABAABAAEAIBAAIAACAAQA=</HashCode>
+      <FileName>OrganismStrong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NSS_lib.Evolution">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Slelection and evolution.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.Selection">
-    <Position X="3" Y="3.75" Width="2.25" />
+  <Class Name="NSS_lib.Selection">
+    <Position X="1" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Slelection and evolution.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Natural_Selection_SimulatorV2.StatisticCollector" Collapsed="true">
-    <Position X="5.5" Y="3.5" Width="1.5" />
+  <Class Name="NSS_lib.StatisticCollector" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAEAAAACAAAAAAAAAAAAAAABAAAAAQAIEIAAAAAEABA=</HashCode>
       <FileName>Statistics.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Natural_Selection_SimulatorV2.IEnvironmentChanger" Collapsed="true">
-    <Position X="5.75" Y="1" Width="1.5" />
+  <Interface Name="NSS_lib.IEnvironmentChanger" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIBAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IEnvironmentChanger.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Natural_Selection_SimulatorV2.IEnvironmentNss" Collapsed="true">
-    <Position X="7.5" Y="1" Width="1.5" />
+  <Interface Name="NSS_lib.IEnvironmentNss" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAEAAA=</HashCode>
       <FileName>IEnvironmentNss.cs</FileName>

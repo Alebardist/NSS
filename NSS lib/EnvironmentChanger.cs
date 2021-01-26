@@ -1,11 +1,9 @@
 ﻿using System;
 
-namespace Natural_Selection_SimulatorV2
+namespace NSS_lib
 {
     public class EnvironmentChanger : IEnvironmentChanger
     {
-        private readonly Random _randomNumberGenerator = new Random();
-
         private int _temperatureChangeAmount;
         private int _foodAmountChange;
 
@@ -17,22 +15,22 @@ namespace Natural_Selection_SimulatorV2
 
         public decimal ChangeTemperature()
         {
-            if (_randomNumberGenerator.Next() == 0)
+            if (RandomIntGenerator.random.Next(2) == 0)
             {
-                return _randomNumberGenerator.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
+                return RandomIntGenerator.random.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
             }
             else
             {
-                return _randomNumberGenerator.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
+                return RandomIntGenerator.random.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
             }
         }
 
         //TODO: remake RAD generation algorithm
         public decimal ChangeRadiation()
         {
-            if (_randomNumberGenerator.Next(0, 1) == 0)
+            if (RandomIntGenerator.random.Next(0, 1) == 0)
             {
-                return Convert.ToDecimal(_randomNumberGenerator.NextDouble());
+                return Convert.ToDecimal(RandomIntGenerator.random.Next());
             }
             return 0;
         }
@@ -40,7 +38,7 @@ namespace Natural_Selection_SimulatorV2
 
         public int GenerateFood()
         {
-            return _randomNumberGenerator.Next(_foodAmountChange / 2, _foodAmountChange);
+            return RandomIntGenerator.random.Next(_foodAmountChange / 2, _foodAmountChange);
         }
 
 

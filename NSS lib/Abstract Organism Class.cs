@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Natural_Selection_SimulatorV2
+﻿namespace NSS_lib
 {
     public abstract class OrganismPrototype
     {
@@ -34,7 +28,7 @@ namespace Natural_Selection_SimulatorV2
             set;
             
         }
-        public abstract int MaxRad { get; set; }
+        public abstract int MaxRad { get; protected set; }
 
         public abstract void PopulationExtension(EnvironmentNss envExmp);
     }

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections.Generic;
 
-using Natural_Selection_SimulatorV2;
+using NSS_lib;
 
 namespace WindowsFormsApp2
 {
@@ -49,5 +49,6 @@ namespace WindowsFormsApp2
                 Xdays++;
             }
         }
+
     }
 }
