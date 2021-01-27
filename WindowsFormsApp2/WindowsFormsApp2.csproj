@@ -119,17 +119,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NSS lib\NSS lib.csproj">
-      <Project>{921ad05f-1670-4f53-8193-0104c6fb5db0}</Project>
-      <Name>NSS lib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSS lib\NSS lib.csproj">
+      <Project>{921ad05f-1670-4f53-8193-0104c6fb5db0}</Project>
+      <Name>NSS lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

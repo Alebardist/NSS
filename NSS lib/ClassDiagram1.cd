@@ -13,6 +13,7 @@
       <HashCode>AAAAAAAAAAAAIBAAAAACAAAAAAQCAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnvironmentChanger.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="NSS_lib.EnvironmentNss" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="7" Y="1.5" Width="1.75" />
@@ -36,13 +37,6 @@
       <FileName>Organism.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NSS_lib.OrganismStrong" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>YAAABAAAAAAAAAgoAAAAAAABAABAAEAIBAAIAACAAQA=</HashCode>
-      <FileName>OrganismStrong.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="NSS_lib.Evolution">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
@@ -57,8 +51,8 @@
       <FileName>Slelection and evolution.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NSS_lib.StatisticCollector" Collapsed="true">
-    <Position X="9" Y="4" Width="1.5" />
+  <Class Name="NSS_lib.StatisticCollector">
+    <Position X="5.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAEAAAACAAAAAAAAAAAAAAABAAAAAQAIEIAAAAAEABA=</HashCode>
       <FileName>Statistics.cs</FileName>

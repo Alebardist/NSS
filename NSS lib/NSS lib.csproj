@@ -66,7 +66,6 @@
     <Compile Include="IEnvironmentNss.cs" />
     <Compile Include="NSS launcher.cs" />
     <Compile Include="Organism.cs" />
-    <Compile Include="OrganismStrong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomIntGenerator.cs" />
     <Compile Include="Slelection and evolution.cs" />
