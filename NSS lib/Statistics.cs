@@ -4,6 +4,19 @@ namespace NSS_lib
 {
     public class StatisticCollector
     {
+        private static StatisticCollector instance;
+        private StatisticCollector()
+        {
+        }
+
+        public static StatisticCollector GetInstance()
+        {
+            if (instance == null) instance = new StatisticCollector();
+            return instance;
+        }
+
+        public static void ResetInstance() => instance = null;
+
         // props
         public int DaysPassed { get; private set; }
         public int CurrentFoodAmount { get; private set; }
@@ -38,7 +51,7 @@ namespace NSS_lib
             Temperature.Add(environment.Temperature);
             CurrentFoodAmount = environment.FoodAmount;
             Speed.Add(organism.Speed);
-            EatedByPredators = organism.EatedByPredators;
+            //EatedByPredators = organism.EatedByPredators;
             Radiation = environment.Radiation;
         }
     }

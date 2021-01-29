@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace NSS_lib
+﻿namespace NSS_lib
 {
     static class Evolution
     {

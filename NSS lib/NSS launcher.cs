@@ -7,13 +7,14 @@
         private EnvironmentNss environmentObject;
         private static EnvironmentChanger changer;
 
+        //
         public Launcher( int UserPopulation = 10, int tempResistRange = 10 )
         {
             organism = new Organism(tempResistRange, -tempResistRange, population: UserPopulation);
-            changer = new EnvironmentChanger(10, 100);
+            changer = new EnvironmentChanger(10, 500);
 
             environmentObject = new EnvironmentNss(300, 0, changer);
-            statisticCollector = new StatisticCollector();
+            statisticCollector = StatisticCollector.GetInstance();
         }
         
         public void Main()
@@ -28,6 +29,7 @@
                 Selection.NaturalSelection(organism, environmentObject);
                 Evolution.Evolute(organism, environmentObject);
             }
+            StatisticCollector.ResetInstance();
 
         } 
     }

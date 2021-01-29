@@ -25,20 +25,18 @@ namespace NSS_lib
             }
         }
 
-        //TODO: remake RAD generation algorithm
         public decimal ChangeRadiation()
         {
-            if (RandomIntGenerator.random.Next(0, 1) == 0)
+            if (RandomIntGenerator.random.Next(0, 3) == 0)
             {
-                return Convert.ToDecimal(RandomIntGenerator.random.Next());
+                return Convert.ToDecimal(RandomIntGenerator.random.NextDouble());
             }
             return 0;
         }
 
-
         public int GenerateFood()
         {
-            return RandomIntGenerator.random.Next(_foodAmountChange / 2, _foodAmountChange);
+            return RandomIntGenerator.random.Next(_foodAmountChange / 1, _foodAmountChange);
         }
 
 
