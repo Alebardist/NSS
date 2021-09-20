@@ -1,6 +1,6 @@
 ﻿namespace NSS_lib
 {
-    public interface IEnvironmentNss
+    public interface IEnvironment
     {
         int FoodAmount { get; }
         decimal Radiation { get; }

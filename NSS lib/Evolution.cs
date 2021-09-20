@@ -2,13 +2,13 @@
 {
     static class Evolution
     {
-        public static void Evolute(OrganismPrototype organismExemplar, EnvironmentNss environmentExemplar)
+        public static void Evolute(OrganismPrototype organismExemplar, Environment environmentExemplar)
         {
             ChangeTemperatureResist(organismExemplar, environmentExemplar);
             ChangeSpeed(organismExemplar);
         }
 
-        private static void ChangeTemperatureResist(OrganismPrototype organismExemplar, EnvironmentNss environmentExemplar)
+        private static void ChangeTemperatureResist(OrganismPrototype organismExemplar, Environment environmentExemplar)
         {
             if (organismExemplar.MaxTempResist < environmentExemplar.Temperature)
             {
@@ -20,7 +20,6 @@
             {
                 organismExemplar.MinTempResist += RandomIntGenerator.random.Next(0, 1);
                 organismExemplar.MaxTempResist--;
-
             }
         }
 
@@ -32,26 +31,4 @@
             }
         }
     }
-
-    static class Selection
-    {
-        public static void NaturalSelection(OrganismPrototype organism, EnvironmentNss envExmp)
-        {
-            if (envExmp.Temperature > organism.MaxTempResist || envExmp.Temperature < organism.MinTempResist) organism.Population--;
-            if (envExmp.FoodAmount < organism.FoodConsumption*organism.Population) organism.Population--;
-
-            //TODO: remake RAD reaction
-            //if (envExmp.Radiation > organism.MaxRad) organism.Population += 2;
-            if ( organism.Speed < 3 )
-            {
-                int eated = RandomIntGenerator.random.Next(0, 5);
-                organism.Population -= eated;
-                organism.EatedByPredators += eated;
-            }
-        }
-
-    }
-
-
-
 }

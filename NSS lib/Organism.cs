@@ -4,15 +4,7 @@ namespace NSS_lib
 {
     public class Organism : OrganismPrototype
     {
-        //private fields
-        private decimal _maxTempResist;
-        private decimal _minTempResist;
-        private int _speed;
-        private int _population;
-        private int _foodConsumption;
-        private int _eatedByPredators;
-
-        private int _populationExtensionModificator = 4;
+        public const int _populationExtensionModificator = 4;
 
         //props
         public override decimal MaxTempResist
@@ -32,7 +24,6 @@ namespace NSS_lib
             set
             {
                 if (value > 0) _speed = value;
-                else throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -50,7 +41,6 @@ namespace NSS_lib
             set
             {
                 if (value > 0) _foodConsumption = value;
-                else throw new ArgumentOutOfRangeException();
             }
         }
         public override int EatedByPredators
@@ -59,13 +49,19 @@ namespace NSS_lib
             set
             {
                 if (value >= 0) _eatedByPredators = value;
-                else throw new ArgumentOutOfRangeException();
-
             }
         }
         public override int MaxRad { get; protected set; } = 0;
 
-        public Organism(decimal maxTempResist, decimal minTempResist, int speed = 2, int population = 10, int foodConsumption=2)
+        //private fields
+        private decimal _maxTempResist;
+        private decimal _minTempResist;
+        private int _speed;
+        private int _population;
+        private int _foodConsumption;
+        private int _eatedByPredators;
+
+        public Organism(decimal maxTempResist, decimal minTempResist, int speed = 2, int population = 10, int foodConsumption = 2)
         {
             MaxTempResist = maxTempResist;
             MinTempResist = minTempResist;
@@ -74,13 +70,9 @@ namespace NSS_lib
             FoodConsumption = foodConsumption;
         }
 
-        public override void PopulationExtension(EnvironmentNss envExmp)
+        public override void IncreasePopulation(Environment envExmp)
         {
             if (envExmp.FoodAmount > FoodConsumption) Population += RandomIntGenerator.random.Next(0, _population / _populationExtensionModificator);
-
         }
-
-        
-
     }
 }

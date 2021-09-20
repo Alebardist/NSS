@@ -4,18 +4,18 @@ namespace NSS_lib
 {
     public class StatisticCollector
     {
-        private static StatisticCollector instance;
-        private StatisticCollector()
-        {
-        }
+        private static StatisticCollector _instance;
 
         public static StatisticCollector GetInstance()
         {
-            if (instance == null) instance = new StatisticCollector();
-            return instance;
+            if (_instance == null)
+            {
+                _instance = new StatisticCollector();
+            }
+            return _instance;
         }
 
-        public static void ResetInstance() => instance = null;
+        public static void ResetInstance() => _instance = null;
 
         // props
         public int DaysPassed { get; private set; }
@@ -39,19 +39,16 @@ namespace NSS_lib
             }
         }
 
-
-        public void CollectData(OrganismPrototype organism, EnvironmentNss environment)
+        public void CollectData(OrganismPrototype organism, Environment environment)
         {
             DaysPassed++;
-            //for preventing overflow exception
-            //if (DaysPassed == 500) throw new System.StackOverflowException();
 
             MaxPopulation = organism.Population;
             PopulationList.Add(organism.Population);
             Temperature.Add(environment.Temperature);
             CurrentFoodAmount = environment.FoodAmount;
             Speed.Add(organism.Speed);
-            //EatedByPredators = organism.EatedByPredators;
+            EatedByPredators = organism.EatedByPredators;
             Radiation = environment.Radiation;
         }
     }

@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NSS_lib</RootNamespace>
     <AssemblyName>NSS lib</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,17 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract Organism Class.cs" />
+    <Compile Include="OrganismPrototype.cs" />
     <Compile Include="EnvironmentChanger.cs" />
-    <Compile Include="EnvironmentNss.cs" />
-    <Compile Include="IEnvironmentChanger.cs" />
-    <Compile Include="IEnvironmentNss.cs" />
-    <Compile Include="NSS launcher.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="Interfaces\IEnvironmentChanger.cs" />
+    <Compile Include="Interfaces\IEnvironment.cs" />
+    <Compile Include="Launcher.cs" />
     <Compile Include="Organism.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomIntGenerator.cs" />
-    <Compile Include="Slelection and evolution.cs" />
-    <Compile Include="Statistics.cs" />
+    <Compile Include="Evolution.cs" />
+    <Compile Include="Selection.cs" />
+    <Compile Include="StatisticCollector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

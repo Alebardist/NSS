@@ -4,8 +4,8 @@ namespace NSS_lib
 {
     public class EnvironmentChanger : IEnvironmentChanger
     {
-        private int _temperatureChangeAmount;
-        private int _foodAmountChange;
+        private readonly int _temperatureChangeAmount;
+        private readonly int _foodAmountChange;
 
         public EnvironmentChanger(int temperatureChangeAmount, int foodAmountChange)
         {
@@ -19,10 +19,8 @@ namespace NSS_lib
             {
                 return RandomIntGenerator.random.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
             }
-            else
-            {
-                return RandomIntGenerator.random.Next(-_temperatureChangeAmount, _temperatureChangeAmount);
-            }
+
+            return 0;
         }
 
         public decimal ChangeRadiation()
@@ -31,6 +29,7 @@ namespace NSS_lib
             {
                 return Convert.ToDecimal(RandomIntGenerator.random.NextDouble());
             }
+
             return 0;
         }
 
@@ -38,10 +37,5 @@ namespace NSS_lib
         {
             return RandomIntGenerator.random.Next(_foodAmountChange / 1, _foodAmountChange);
         }
-
-
-
-
     }
-
 }
